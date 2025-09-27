@@ -10,8 +10,8 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'Islamify',
+  tagline: 'Your Repository of Islamic Resources',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -83,19 +83,21 @@ const config = {
         respectPrefersColorScheme: true,
       },
       navbar: {
-        title: 'My Site',
+        title: 'Islamify',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
         },
         items: [
-          {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Tutorial',
-          },
+          //{ type: 'docSidebar', sidebarId: 'tutorialSidebar', position: 'left', label: 'Collections'},
+          
+          { type: 'docSidebar', sidebarId: 'allSidebar', position: 'left', label: 'All' },
+          { type: 'docSidebar', sidebarId: 'duasSidebar', position: 'left', label: 'Duas' },
+          { type: 'docSidebar', sidebarId: 'ziyaratSidebar', position: 'left', label: 'Ziyarat' },
+          // … other items  
+
           {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/about', label: 'About Us', position: 'left'},
           {
             href: 'https://github.com/facebook/docusaurus',
             label: 'GitHub',
