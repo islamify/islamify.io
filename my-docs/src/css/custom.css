@@ -28,3 +28,42 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+/* Centered text for Duas, Ziyarats, Quran, Hadith, etc. */
+.center-text {
+  text-align: center;
+  line-height: 1.6;
+}
+
+.center-text p {
+  margin: 0.3rem 0; /* spacing between each line */
+}
+
+/* Arabic */
+.center-text p:nth-child(3n+1) {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+/* Transliteration */
+.center-text p:nth-child(3n+2) {
+  font-size: 1.1rem;
+  font-style: normal;
+}
+
+/* Translation */
+.center-text p:nth-child(3n+3) {
+  font-size: 1rem;
+  font-style: italic;
+  padding: 0;               /* remove padding, spacing handled by pseudo-element */
+  position: relative;
+}
+
+.center-text p:nth-child(3n+3)::after {
+  content: "";
+  display: block;
+  width: 20%;
+  height: 1px;
+  background-color: #ccc;
+  margin: 1.5rem auto 1.5rem;   /* 1rem above line, 1rem below line */
+}
