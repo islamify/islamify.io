@@ -24,19 +24,8 @@
 .center-text p.translation {
   font-size: 1rem;
   font-style: italic;
-  margin-bottom: 1.2rem;
+  margin-bottom: 0; /* no separator here */
   position: relative;
-}
-
-/* Separator line after translation */
-.center-text p.translation::after {
-  content: '';
-  display: block;
-  width: 25%;
-  height: 1px;
-  background-color: #ccc;
-  margin: 0.8rem auto 0.8rem auto;
-  
 }
 
 /* ================== ToggleText controls ================== */
@@ -67,7 +56,7 @@
 .toggle-container p.transliteration,
 .toggle-container p.translation {
   opacity: 1;
-  max-height: 100px; /* enough for one line */
+  max-height: 100px;
   overflow: hidden;
   transition: opacity 0.3s ease, max-height 0.3s ease;
 }
@@ -85,7 +74,7 @@
 }
 
 .line-block:hover {
-  background-color: rgba(200, 200, 200, 0.20); /* subtle highlight */
+  background-color: rgba(200, 200, 200, 0.20);
 }
 
 /* Dark mode hover */
@@ -93,3 +82,37 @@
   background-color: rgba(255, 255, 255, 0.05);
 }
 
+/* ================== Dictionary toggle styling ================== */
+.dictionary-block {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.3rem;
+  font-size: 0.9rem;
+}
+
+.dictionary-block span {
+  background-color: #f0f0f0;
+  border-radius: 12px;
+  padding: 0.2rem 0.5rem;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+/* Dark mode dictionary pills */
+[data-theme='dark'] .dictionary-block span {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* ================== Horizontal line separator after dictionary ================== */
+.line-separator {
+  width: 25%;
+  margin: 0.8rem auto 1rem auto;
+  border: none;
+  border-top: 1px solid #ccc;
+}
+
+[data-theme='dark'] .line-separator {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
