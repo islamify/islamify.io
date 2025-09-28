@@ -1,69 +1,95 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
-
-/* You can override the default Infima variables here. */
-:root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-}
-
-/* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-}
-
-/* Centered text for Duas, Ziyarats, Quran, Hadith, etc. */
+/* ================== Centered text ================== */
 .center-text {
   text-align: center;
   line-height: 1.6;
+  margin-bottom: 2rem;
 }
 
 .center-text p {
-  margin: 0.3rem 0; /* spacing between each line */
+  margin: 0.3rem 0;
 }
 
 /* Arabic */
-.center-text p:nth-child(3n+1) {
+.center-text p.arabic {
   font-size: 1.3rem;
   font-weight: bold;
 }
 
 /* Transliteration */
-.center-text p:nth-child(3n+2) {
+.center-text p.transliteration {
   font-size: 1.1rem;
-  font-style: normal;
 }
 
 /* Translation */
-.center-text p:nth-child(3n+3) {
+.center-text p.translation {
   font-size: 1rem;
   font-style: italic;
-  padding: 0;               /* remove padding, spacing handled by pseudo-element */
+  margin-bottom: 1.2rem;
   position: relative;
 }
 
-.center-text p:nth-child(3n+3)::after {
-  content: "";
+/* Separator line after translation */
+.center-text p.translation::after {
+  content: '';
   display: block;
-  width: 20%;
+  width: 25%;
   height: 1px;
   background-color: #ccc;
-  margin: 1.5rem auto 1.5rem;   /* 1rem above line, 1rem below line */
+  margin: 0.8rem auto 0.8rem auto;
+  
 }
+
+/* ================== ToggleText controls ================== */
+.toggle-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.toggle-label {
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.toggle-reset {
+  background: transparent;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0 0.5rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+/* ================== Smooth fade for show/hide ================== */
+.toggle-container p.arabic,
+.toggle-container p.transliteration,
+.toggle-container p.translation {
+  opacity: 1;
+  max-height: 100px; /* enough for one line */
+  overflow: hidden;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+.toggle-container p.hidden {
+  opacity: 0;
+  max-height: 0;
+}
+
+/* ================== Line-block hover ================== */
+.line-block {
+  padding: 0.3rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.line-block:hover {
+  background-color: rgba(200, 200, 200, 0.20); /* subtle highlight */
+}
+
+/* Dark mode hover */
+[data-theme='dark'] .line-block:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+

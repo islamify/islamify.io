@@ -3,36 +3,50 @@ id: faraj
 title: Faraj
 ---
 
-<div className="center-text">
-  <p>اللّهُمّ كُنْ لِوَلِيّكَ الحُجّةِ ابْنِ الحَسَنِ</p>
-  <p>Allahumma kun li-waliyyika al-Hujjat ibn al-Hasan</p>
-  <p>O Allah, be for Your representative, Al-Hujjat ibn Al-Hasan</p>
+import ToggleText from '@site/src/components/ToggleText';
 
-  <p>صَلَوَاتُكَ عَلَيْهِ وَعَلَى آبَائِهِ</p>
-  <p>Salawatuka 'alayhi wa 'ala aabihi</p>
-  <p>Your blessings upon him and his forefathers</p>
-
-  <p>فِي هذِهِ السَّاعَةِ وَفي كُلّ سَاعَةٍ</p>
-  <p>Fi hadhihi as-sa'ah wa fi kulli sa'ah</p>
-  <p>At this hour and every hour</p>
-
-  <p>وَلِيّاً وَحَافِظاً</p>
-  <p>Waliyyan wa hafizhan</p>
-  <p>A guardian and protector</p>
-
-  <p>وَقَائِداً وَنَاصِراً</p>
-  <p>Wa qa'idan wa nasiran</p>
-  <p>A leader and helper</p>
-
-  <p>وَدَلِيلاً وَعَيْناً</p>
-  <p>Wa dalilan wa 'aynan</p>
-  <p>A guide and an eye</p>
-
-  <p>حَتَّى تُسْكِنَهُ أَرْضَكَ طَوْعاً</p>
-  <p>Hatta tuskinahu ardhaka tawan</p>
-  <p>Until You make him dwell on Your earth willingly</p>
-
-  <p>وَتُمَتّعَهُ فِيهَا طَوِيلاً</p>
-  <p>Wa tumatti'ahu fiha tawilan</p>
-  <p>And grant him long enjoyment therein</p>
-</div>
+<ToggleText
+  storageKey="faraj"
+  lines={[
+    {
+      arabic: 'اللّهُمّ كُنْ لِوَلِيّكَ الحُجّةِ ابْنِ الحَسَنِ',
+      transliteration: 'Allahumma kun li-waliyyika al-Hujjat ibn al-Hasan',
+      translation: 'O Allah, be for Your representative, Al-Hujjat ibn Al-Hasan'
+    },
+    {
+      arabic: 'صَلَوَاتُكَ عَلَيْهِ وَعَلَى آبَائِهِ',
+      transliteration: "Salawatuka 'alayhi wa 'ala aabihi",
+      translation: 'Your blessings upon him and his forefathers'
+    },
+    {
+      arabic: 'فِي هذِهِ السَّاعَةِ وَفي كُلّ سَاعَةٍ',
+      transliteration: 'Fi hadhihi as-sa‘ah wa fi kulli sa‘ah',
+      translation: 'At this hour and every hour'
+    },
+    {
+      arabic: 'وَلِيّاً وَحَافِظاً',
+      transliteration: 'Waliyyan wa hafizhan',
+      translation: 'A guardian and protector'
+    },
+    {
+      arabic: 'وَقَائِداً وَنَاصِراً',
+      transliteration: 'Wa qa‘idan wa nasiran',
+      translation: 'A leader and helper'
+    },
+    {
+      arabic: 'وَدَلِيلاً وَعَيْناً',
+      transliteration: "Wa dalilan wa 'aynan",
+      translation: 'A guide and an eye'
+    },
+    {
+      arabic: 'حَتَّى تُسْكِنَهُ أَرْضَكَ طَوْعاً',
+      transliteration: 'Hatta tuskinahu ardhaka tawan',
+      translation: 'Until You make him dwell on Your earth willingly'
+    },
+    {
+      arabic: 'وَتُمَتّعَهُ فِيهَا طَوِيلاً',
+      transliteration: "Wa tumatti'ahu fiha tawilan",
+      translation: 'And grant him long enjoyment therein'
+    }
+  ]}
+/>
