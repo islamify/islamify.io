@@ -1,0 +1,46 @@
+/* src/css/typography.css */
+
+/* ================== Arabic, Transliteration, Translation Fonts ================== */
+
+/* Arabic main lines */
+.arabic {
+  font-family: 'Amiri', 'Scheherazade New', 'Noto Naskh Arabic', 'Lateef', 'Cairo', serif;
+  direction: rtl;
+  text-align: center;
+}
+
+/* Transliteration */
+.transliteration {
+  font-family: 'Gentium Plus', 'Times New Roman', serif;
+}
+
+/* Translation */
+.translation {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* ================== Dictionary pills ================== */
+.dictionary-block span {
+  display: inline-block;
+  text-align: center;
+  direction: ltr;
+  font-family: inherit;
+  white-space: nowrap;
+}
+
+/* Force Arabic inside pills to RTL */
+.dictionary-block span:has(.arabic) {
+  direction: rtl;
+}
+
+/* ================== Font dropdown container ================== */
+.font-dropdown-container {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.font-dropdown-container select {
+  padding: 0.2rem 0.5rem;
+  font-size: 1rem;
+}

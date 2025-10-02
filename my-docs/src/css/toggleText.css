@@ -1,0 +1,177 @@
+/* src/css/toggleText.css */
+
+/* ================== Centered text ================== */
+.center-text {
+  text-align: center;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.center-text p {
+  margin: 0.3rem 0;
+  transition: opacity 0.3s ease, max-height 0.3s ease, font-size 0.2s ease; /* smooth transition including font-size */
+}
+
+/* ================== ToggleText controls ================== */
+.toggle-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.toggle-label {
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.toggle-reset {
+  background: transparent;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0 0.5rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+/* ================== Smooth fade for show/hide ================== */
+.toggle-container p.arabic,
+.toggle-container p.transliteration,
+.toggle-container p.translation,
+.dictionary-block {
+  opacity: 1;
+  max-height: 1000px;
+  overflow: hidden;
+  transition: opacity 0.3s ease, max-height 0.3s ease, font-size 0.2s ease;
+}
+
+.toggle-container p.hidden,
+.dictionary-block.hidden {
+  opacity: 0;
+  max-height: 0;
+}
+
+/* ================== Line-block hover ================== */
+.line-block {
+  padding: 0.3rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.line-block:hover {
+  background-color: rgba(200, 200, 200, 0.20);
+}
+
+[data-theme='dark'] .line-block:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* ================== Dictionary toggle styling ================== */
+.dictionary-block {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.3rem;
+  font-size: 0.9rem;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+.dictionary-block span {
+  background-color: #f0f0f0;
+  color: #000;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  padding: 0.2rem 0.5rem;
+  white-space: nowrap;
+  display: inline-block;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.dictionary-block span:hover {
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+[data-theme='dark'] .dictionary-block span {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+[data-theme='dark'] .dictionary-block span:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* ================== Horizontal line separator ================== */
+.line-separator {
+  width: 25%;
+  margin: 0.8rem auto 1rem auto;
+  border: none;
+  border-top: 1px solid #ccc;
+}
+
+[data-theme='dark'] .line-separator {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* ================== Font-size controls ================== */
+.font-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.font-controls div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.font-controls label {
+  width: 100px;
+  text-align: right;
+}
+
+.font-controls input[type="range"] {
+  flex: 1;
+  cursor: pointer;
+}
+
+/* Slider dark mode */
+[data-theme='dark'] .font-controls input[type="range"] {
+  background: #555;
+}
+
+[data-theme='dark'] .font-controls input[type="range"]::-webkit-slider-thumb,
+[data-theme='dark'] .font-controls input[type="range"]::-moz-range-thumb {
+  background: #fff;
+  border: 2px solid #000;
+}
+
+[data-theme='dark'] .font-controls input[type="range"]:hover::-webkit-slider-thumb,
+[data-theme='dark'] .font-controls input[type="range"]:hover::-moz-range-thumb {
+  background: #ccc;
+}
+
+/* ================== Responsive stacking for mobile ================== */
+@media (max-width: 480px) {
+  .font-controls div {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .font-controls label {
+    width: auto;
+    text-align: center;
+  }
+
+  .font-controls input[type="range"] {
+    width: 80%;
+  }
+}

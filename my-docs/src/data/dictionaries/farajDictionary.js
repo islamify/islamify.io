@@ -1,4 +1,5 @@
-const duaDictionary = {
+// src/data/dictionaries/farajDictionary.js
+const farajDictionary = {
   "اللّهُمّ": { transliteration: "Allahumma", translation: "O Allah" },
   "كُنْ": { transliteration: "kun", translation: "be" },
   "لِوَلِيّكَ": { transliteration: "li-waliyyika", translation: "for Your representative" },
@@ -11,13 +12,13 @@ const duaDictionary = {
   "آبَائِهِ": { transliteration: "aabihi", translation: "his forefathers" },
   "فِي": { transliteration: "Fi", translation: "In" },
   "هذِهِ": { transliteration: "hadhihi", translation: "this" },
-  "السَّاعَةِ": { transliteration: "as-sa‘ah", translation: "hour" },
+  "السَّاعَةِ": { transliteration: "as-sa'ah", translation: "hour" },
   "وَفي": { transliteration: "wa fi", translation: "and in" },
   "كُلّ": { transliteration: "kulli", translation: "every" },
-  "سَاعَةٍ": { transliteration: "sa‘ah", translation: "hour" },
+  "سَاعَةٍ": { transliteration: "sa'ah", translation: "hour" },
   "وَلِيّاً": { transliteration: "Waliyyan", translation: "a guardian" },
   "حَافِظاً": { transliteration: "hafizhan", translation: "protector" },
-  "وَقَائِداً": { transliteration: "Wa qa‘idan", translation: "a leader" },
+  "وَقَائِداً": { transliteration: "Wa qa'idan", translation: "a leader" },
   "نَاصِراً": { transliteration: "wa nasiran", translation: "helper" },
   "وَدَلِيلاً": { transliteration: "Wa dalilan", translation: "a guide" },
   "عَيْناً": { transliteration: "'aynan", translation: "an eye" },
@@ -27,7 +28,7 @@ const duaDictionary = {
   "طَوْعاً": { transliteration: "tawan", translation: "willingly" },
   "تُمَتّعَهُ": { transliteration: "tumatti'ahu", translation: "grant him enjoyment" },
   "فِيهَا": { transliteration: "fiha", translation: "therein" },
-  "طَوِيلاً": { transliteration: "tawilan", translation: "long" },
+  "طَوِيلاً": { transliteration: "tawilan", translation: "long" }
 };
 
-export default duaDictionary;
+export default farajDictionary;
